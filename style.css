@@ -115,7 +115,7 @@ button:hover {
     position: fixed;
     pointer-events: none;
     z-index: 5;
-    animation: explode 1.8s ease-out forwards;
+    animation: explode 1.2s ease-out forwards;
     color: #FFD700;
     background: transparent !important;
 }
