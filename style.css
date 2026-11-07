@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle, #4b1208, #12020b 75%);
+    color: white;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    color: #ffd700;
+    text-shadow: 0 0 10px orange, 0 0 30px gold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px orange;
+    }
+    to {
+        text-shadow: 0 0 30px gold, 0 0 60px orange;
+    }
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffdb9c;
+}
+
+.diya {
+    position: absolute;
+    font-size: 4rem;
+    animation: diyaGlow 1.5s infinite alternate;
+}
+
+.diya-left {
+    left: -60px;
+    top: -80px;
+    margin:40px;
+}
+
+.diya-right {
+    right: -60px;
+    top: -80px;
+    margin:40px;
+}
+
+@keyframes diyaGlow {
+    from {
+        filter: drop-shadow(0 0 5px orange);
+        transform: scale(1);
+    }
+    to {
+        filter: drop-shadow(0 0 25px gold);
+        transform: scale(1.15);
+    }
+}
+
+.rangoli {
+    font-size: 3rem;
+    margin: 35px;
+    animation: rotate 6s alternate 1;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button {
+    padding: 16px 30px;
+    border: 2px solid gold;
+    border-radius: 40px;
+    background: linear-gradient(45deg, #ff4500, #ffb700);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px orange;
+    transition: 0.4s;
+}
+
+button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 0 40px gold;
+}
+
+#message {
+    margin-top: 25px;
+    color: #ffdf80;
+    font-size: 1.2rem;
+    min-height: 30px;
+}
+
+.firework {
+    position: fixed;
+    pointer-events: none;
+    z-index: 5;
+    animation: explode 1.8s ease-out forwards;
+    color: #FFD700;
+    background: transparent !important;
+}
+
+@keyframes explode {
+    0% {
+        transform: translate(0, 0) scale(0.2) rotate(0deg);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--x), var(--y))
+            scale(1.5)
+            rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+#heading.celebrating {
+    animation: pop 0.7s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+    to {
+        transform: scale(1.15);
+        color: #ffffff;
+    }
+}
+
+@media(max-width: 600px) {
+    .diya-left {
+        left: -10px;
+        top: -90px;
+    }
+
+    .diya-right {
+        right: -10px;
+        top: -90px;
+    }
+
+    .diya {
+        font-size: 2.5rem;
+    }
+}
