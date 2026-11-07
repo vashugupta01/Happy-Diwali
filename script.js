@@ -17,7 +17,7 @@ const colors = [
 
 function createFirework(x, y) {
 
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 60; i++) {
 
         const particle = document.createElement("div");
 
@@ -74,6 +74,6 @@ button.addEventListener("click", () => {
 
             createFirework(x, y);
 
-        }, i * 250);
+        }, i * 400);
     }
 });
